@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from utilities import get_prefix
 
 
-class Command_Captcha(commands.Cog):
+class CommandCaptcha(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -38,4 +38,4 @@ class Command_Captcha(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Captcha(client))
+    client.add_cog(CommandCaptcha(client))

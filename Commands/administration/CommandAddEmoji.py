@@ -7,7 +7,7 @@ import aiohttp
 from io import BytesIO
 
 
-class Command_DodajEmoji(commands.Cog):
+class CommandDodajEmoji(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -89,4 +89,4 @@ class Command_DodajEmoji(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_DodajEmoji(client))
+    client.add_cog(CommandDodajEmoji(client))

@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from utilities import get_prefix
 
 
-class Command_Warn(commands.Cog):
+class CommandWarn(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -221,4 +221,4 @@ class Command_Warn(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Warn(client))
+    client.add_cog(CommandWarn(client))

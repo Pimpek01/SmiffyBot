@@ -6,7 +6,7 @@ from re import search
 import sqlite3
 
 
-class Event_On_Message(commands.Cog):
+class EventOnMessage(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -48,4 +48,4 @@ class Event_On_Message(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Event_On_Message(client))
+    client.add_cog(EventOnMessage(client))

@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from Commands.settings.CommandLogs import get_log_channel
 
 
-class Event_Message_Edit(commands.Cog):
+class EventMessageEdit(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -32,4 +32,4 @@ class Event_Message_Edit(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Event_Message_Edit(client))
+    client.add_cog(EventMessageEdit(client))

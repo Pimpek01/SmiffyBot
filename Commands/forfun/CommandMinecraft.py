@@ -14,8 +14,7 @@ def getinfo(serwer):
     return result
 
 
-
-class Command_Minecraft(commands.Cog):
+class CommandMinecraft(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -45,4 +44,4 @@ Players: {players}/{max_players}
 
 
 def setup(client):
-    client.add_cog(Command_Minecraft(client))
+    client.add_cog(CommandMinecraft(client))

@@ -3,7 +3,7 @@ from nextcord.ext import commands
 import sqlite3
 
 
-class Event_Guild_Join(commands.Cog):
+class EventGuildJoin(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -26,4 +26,4 @@ class Event_Guild_Join(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Event_Guild_Join(client))
+    client.add_cog(EventGuildJoin(client))

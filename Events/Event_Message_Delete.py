@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from Commands.settings.CommandLogs import get_log_channel
 
 
-class Event_Message_Delete(commands.Cog):
+class EventMessageDelete(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -31,4 +31,4 @@ class Event_Message_Delete(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Event_Message_Delete(client))
+    client.add_cog(EventMessageDelete(client))

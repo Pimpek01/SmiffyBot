@@ -5,7 +5,7 @@ from textwrap import indent
 from contextlib import redirect_stdout
 
 
-class Command_Eval(commands.Cog):
+class CommandEval(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -63,4 +63,4 @@ class Command_Eval(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Eval(client))
+    client.add_cog(CommandEval(client))

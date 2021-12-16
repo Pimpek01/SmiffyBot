@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from Commands.settings.CommandLogs import get_log_channel
 
 
-class Event_User_Update(commands.Cog):
+class EventUserUpdate(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -54,4 +54,4 @@ class Event_User_Update(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Event_User_Update(client))
+    client.add_cog(EventUserUpdate(client))

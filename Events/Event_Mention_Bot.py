@@ -16,7 +16,7 @@ class Event_Mentions_Buttons(discord.ui.View):
         self.add_item(discord.ui.Button(label='Zaproszenie', url=bot_invite_url))
 
 
-class Event_Mention_Bot(commands.Cog):
+class EventMentionBot(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -49,4 +49,4 @@ class Event_Mention_Bot(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Event_Mention_Bot(client))
+    client.add_cog(EventMentionBot(client))

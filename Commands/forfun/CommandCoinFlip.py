@@ -3,7 +3,7 @@ import nextcord as discord
 from random import choice
 
 
-class Command_CoinFlip(commands.Cog):
+class CommandCoinFlip(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -21,4 +21,4 @@ class Command_CoinFlip(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_CoinFlip(client))
+    client.add_cog(CommandCoinFlip(client))

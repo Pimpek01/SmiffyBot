@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from utilities import get_prefix
 
 
-class Command_Help_Buttons(discord.ui.View):
+class CommandHelpButtons(discord.ui.View):
 
     def __init__(self, ctx, **kwargs):
         super().__init__()
@@ -70,7 +70,7 @@ class Command_Help_Buttons(discord.ui.View):
         await interaction.response.edit_message(embed=self.embed)
 
 
-class Command_Help(commands.Cog):
+class CommandHelp(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -80,7 +80,7 @@ class Command_Help(commands.Cog):
         prefix = get_prefix(self.client, ctx)
         if prefix == '':
             prefix = 'Invisible!'
-        b = Command_Help_Buttons(ctx=ctx)
+        b = CommandHelpButtons(ctx=ctx)
         embed = discord.Embed(
             title='Spis wszystkich komend',
             color=discord.Color.dark_theme(),
@@ -98,4 +98,4 @@ class Command_Help(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Help(client))
+    client.add_cog(CommandHelp(client))

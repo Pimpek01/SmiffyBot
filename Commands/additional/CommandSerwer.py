@@ -3,7 +3,7 @@ from nextcord.ext import commands
 from datetime import datetime, timedelta
 
 
-class Command_Serwer(commands.Cog):
+class CommandSerwer(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -45,4 +45,4 @@ class Command_Serwer(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Serwer(client))
+    client.add_cog(CommandSerwer(client))

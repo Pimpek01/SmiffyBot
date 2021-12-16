@@ -4,7 +4,7 @@ from io import BytesIO
 from aiohttp import ClientSession
 
 
-class Command_Darken(commands.Cog):
+class CommandDarken(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -22,4 +22,4 @@ class Command_Darken(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Darken(client))
+    client.add_cog(CommandDarken(client))

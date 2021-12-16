@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from utilities import get_prefix
 
 
-class Command_Mute(commands.Cog):
+class CommandMute(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -100,4 +100,4 @@ class Command_Mute(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Mute(client))
+    client.add_cog(CommandMute(client))

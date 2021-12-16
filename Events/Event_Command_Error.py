@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from utilities import get_prefix
 
 
-class Event_Command_Error(commands.Cog):
+class EventCommandError(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -20,4 +20,4 @@ class Event_Command_Error(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Event_Command_Error(client))
+    client.add_cog(EventCommandError(client))

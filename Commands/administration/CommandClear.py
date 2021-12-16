@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from utilities import get_prefix
 
 
-class Command_Clear(commands.Cog):
+class CommandClear(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -80,4 +80,4 @@ class Command_Clear(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Clear(client))
+    client.add_cog(CommandClear(client))

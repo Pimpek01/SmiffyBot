@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from requests import get
 
 
-class Command_Animals(commands.Cog):
+class CommandAnimals(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -50,4 +50,4 @@ class Command_Animals(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Animals(client))
+    client.add_cog(CommandAnimals(client))

@@ -3,7 +3,7 @@ from nextcord.ext import commands
 from datetime import datetime, timedelta
 
 
-class Command_Avatar(commands.Cog):
+class CommandAvatar(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -25,4 +25,4 @@ class Command_Avatar(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Avatar(client))
+    client.add_cog(CommandAvatar(client))

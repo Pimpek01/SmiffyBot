@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import sqlite3
 
 
-class Event_Member_Join(commands.Cog):
+class EventMemberJoin(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -48,4 +48,5 @@ class Event_Member_Join(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Event_Member_Join(client))
+    client.add_cog(EventMemberJoin(client))
+

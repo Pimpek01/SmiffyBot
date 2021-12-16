@@ -4,7 +4,7 @@ from utilities import get_prefix
 from datetime import datetime, timedelta
 
 
-class Command_Ban(commands.Cog):
+class CommandBan(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -108,4 +108,4 @@ class Command_Ban(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Ban(client))
+    client.add_cog(CommandBan(client))

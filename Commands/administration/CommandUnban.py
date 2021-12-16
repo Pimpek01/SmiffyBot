@@ -36,7 +36,7 @@ class BannedMember(commands.Converter):
         return entity
 
 
-class Command_Unban(commands.Cog):
+class CommandUnban(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -100,4 +100,4 @@ class Command_Unban(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Unban(client))
+    client.add_cog(CommandUnban(client))

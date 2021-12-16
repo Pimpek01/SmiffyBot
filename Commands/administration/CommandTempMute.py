@@ -16,7 +16,7 @@ class DurationConverter(commands.Converter):
         raise commands.BadArgument(message='Zła jednostka czasu')
 
 
-class Command_Tempmute(commands.Cog):
+class CommandTempmute(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -117,4 +117,4 @@ class Command_Tempmute(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Tempmute(client))
+    client.add_cog(CommandTempmute(client))

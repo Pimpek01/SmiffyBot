@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 import nextcord
 
 
-class Command_Ascii(commands.Cog):
+class CommandAscii(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -30,4 +30,4 @@ class Command_Ascii(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Ascii(client))
+    client.add_cog(CommandAscii(client))

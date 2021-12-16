@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from utilities import get_prefix
 
 
-class Command_ReportBug(commands.Cog):
+class CommandReportBug(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -55,4 +55,4 @@ class Command_ReportBug(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_ReportBug(client))
+    client.add_cog(CommandReportBug(client))

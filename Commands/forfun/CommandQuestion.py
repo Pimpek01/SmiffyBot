@@ -5,7 +5,7 @@ from random import choice
 from utilities import get_prefix
 
 
-class Command_Pytanie(commands.Cog):
+class CommandPytanie(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -41,4 +41,4 @@ class Command_Pytanie(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Pytanie(client))
+    client.add_cog(CommandPytanie(client))

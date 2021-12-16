@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from utilities import get_prefix
 
 
-class Command_Google_Buttons(discord.ui.View):
+class CommandGoogleButtons(discord.ui.View):
 
     def __init__(self, query):
         super().__init__()
@@ -14,7 +14,7 @@ class Command_Google_Buttons(discord.ui.View):
         self.add_item(discord.ui.Button(label='Wynik Wyszukiwania', url=query))
 
 
-class Command_Google(commands.Cog):
+class CommandGoogle(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -27,7 +27,7 @@ class Command_Google(commands.Cog):
             timestamp=datetime.utcnow() + timedelta(hours=1)
         )
         embed.set_footer(text=ctx.author, icon_url=ctx.author.avatar.url)
-        await ctx.reply(embed=embed, view=Command_Google_Buttons(query))
+        await ctx.reply(embed=embed, view=CommandGoogleButtons(query))
 
     @google.error
     async def google_error(self, ctx, error):
@@ -46,4 +46,4 @@ class Command_Google(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Google(client))
+    client.add_cog(CommandGoogle(client))

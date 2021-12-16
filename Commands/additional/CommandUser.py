@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from nextcord.utils import get
 
 
-class Command_User(commands.Cog):
+class CommandUser(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -43,4 +43,4 @@ class Command_User(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_User(client))
+    client.add_cog(CommandUser(client))

@@ -6,7 +6,7 @@ from utilities import get_prefix
 from datetime import datetime, timedelta
 
 
-class Command_Trump(commands.Cog):
+class CommandTrump(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -37,4 +37,4 @@ class Command_Trump(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Trump(client))
+    client.add_cog(CommandTrump(client))

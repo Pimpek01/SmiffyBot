@@ -1,7 +1,7 @@
 from nextcord.ext.commands import command, Cog
 
 
-class Command_Ping(Cog):
+class CommandPing(Cog):
 
     def __init__(self, client):
         self.client = client
@@ -15,4 +15,4 @@ class Command_Ping(Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Ping(client))
+    client.add_cog(CommandPing(client))

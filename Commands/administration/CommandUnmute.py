@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from utilities import get_prefix
 
 
-class Command_Unmute(commands.Cog):
+class CommandUnmute(commands.Cog):
 
     def __init__(self, client):
         self.client = client
@@ -85,4 +85,4 @@ class Command_Unmute(commands.Cog):
 
 
 def setup(client):
-    client.add_cog(Command_Unmute(client))
+    client.add_cog(CommandUnmute(client))
