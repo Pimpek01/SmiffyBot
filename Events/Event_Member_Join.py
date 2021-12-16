@@ -16,21 +16,20 @@ class EventMemberJoin(commands.Cog):
         info = get_log_channel(member)
         if info:
             channel_id = info[1]
-            for channel in member.guild.channels:
-                if channel.id == channel_id:
-                    embed = discord.Embed(
-                        title='Nowy Użytkownik Dołączył <a:greenbutton:919647666101694494>',
-                        color=discord.Color.yellow(),
-                        timestamp=datetime.utcnow() + timedelta(hours=1)
-                    )
-                    embed.add_field(name='<a:strzalka:919651065597669407> Nazwa', value=f'`{member}`')
-                    embed.add_field(name='<a:strzalka:919651065597669407> ID', value=f'`{member.id}`', inline=False)
-                    embed.add_field(name='<a:strzalka:919651065597669407> Osoby', value='`{}`'.format(sum(not member.bot for member in member.guild.members)))
-                    try:
-                        embed.set_thumbnail(url=member.avatar.url)
-                    except AttributeError:
-                        pass
-                    return await channel.send(embed=embed)
+            channel = self.client.get_channel(channel_id)
+            embed = discord.Embed(
+                title='Nowy Użytkownik Dołączył <a:greenbutton:919647666101694494>',
+                color=discord.Color.yellow(),
+                timestamp=datetime.utcnow() + timedelta(hours=1)
+            )
+            embed.add_field(name='<a:strzalka:919651065597669407> Nazwa', value=f'`{member}`')
+            embed.add_field(name='<a:strzalka:919651065597669407> ID', value=f'`{member.id}`', inline=False)
+            embed.add_field(name='<a:strzalka:919651065597669407> Osoby', value='`{}`'.format(sum(not member.bot for member in member.guild.members)))
+            try:
+                embed.set_thumbnail(url=member.avatar.url)
+            except AttributeError:
+                pass
+            return await channel.send(embed=embed)
 
         db = sqlite3.connect('Data/smiffy_base.db')
         cur = db.cursor()

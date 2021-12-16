@@ -20,6 +20,7 @@ class EventUserUpdate(commands.Cog):
             info = get_log_channel(user)
             if info:
                 channel_id = info[1]
+                channel = self.client.get_channel(channel_id)
                 if before.name != after.name:
                     embed = discord.Embed(
                         title='Użytkownik zmienił nazwę <a:greenbutton:919647666101694494>',
@@ -31,9 +32,7 @@ class EventUserUpdate(commands.Cog):
                     embed.add_field(name='<a:strzalka:919651065597669407> Użytkownik', value=f'`{user}`')
                     embed.set_thumbnail(url=user.avatar.url)
 
-                    for channel in user.guild.channels:
-                        if channel.id == channel_id:
-                            return await channel.send(embed=embed)
+                    return await channel.send(embed=embed)
 
                 if before.discriminator != after.discriminator:
                     embed = discord.Embed(
@@ -48,9 +47,7 @@ class EventUserUpdate(commands.Cog):
                     embed.add_field(name='<a:strzalka:919651065597669407> Użytkownik', value=f'`{user}`')
                     embed.set_thumbnail(url=user.avatar.url)
 
-                    for channel in user.guild.channels:
-                        if channel.id == channel_id:
-                            return await channel.send(embed=embed)
+                    return await channel.send(embed=embed)
 
 
 def setup(client):

@@ -15,19 +15,18 @@ class EventMessageDelete(commands.Cog):
             info = get_log_channel(message)
             if info:
                 channel_id = info[1]
-                for channel in message.guild.channels:
-                    if channel.id == channel_id:
-                        async for entry in message.guild.audit_logs(limit=1, action=discord.AuditLogAction.message_delete):
-                            deleter = entry.user
-                            embed = discord.Embed(
-                                title='Wiadomość została usunięta <a:redbutton:919647776885850182>',
-                                color=discord.Color.dark_gray(),
-                                timestamp=datetime.utcnow() + timedelta(hours=1)
-                            )
-                            embed.add_field(name='<a:strzalka:919651065597669407> Wiadomość', value=f'`{message.content}`')
-                            embed.add_field(name='<a:strzalka:919651065597669407> Usuwający', value=f'`{deleter}`', inline=False)
-                            embed.set_thumbnail(url=deleter.avatar.url)
-                            return await channel.send(embed=embed)
+                channel = self.client.get_channel(channel_id)
+                embed = discord.Embed(
+                    title='Wiadomość została usunięta <a:redbutton:919647776885850182>',
+                    color=discord.Color.dark_gray(),
+                    timestamp=datetime.utcnow() + timedelta(hours=1)
+                    )
+                embed.add_field(name='<a:strzalka:919651065597669407> Wiadomość', value=f'`{message.content}`')
+                try:
+                    embed.set_thumbnail(url=message.guild.icon.url)
+                except AttributeError:
+                    pass
+                return await channel.send(embed=embed)
 
 
 def setup(client):
