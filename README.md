@@ -9,7 +9,6 @@ Multifunctional Discord Bot Project
 5. Run `Bot.py` and Enjoy!
 
 ## Requirements
-Python version 3.8 or higher\
 See [requirements.txt](requirements.txt)
 
 ## Links
