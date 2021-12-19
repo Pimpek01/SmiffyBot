@@ -10,7 +10,7 @@ Multifunctional Discord Bot Project
 
 ## Requirements
 Python version 3.8 or higher\
-requirements.txt
+See [requirements.txt](requirements.txt)
 
 ## Links
 [Discord Support](https://discord.gg/NTHJPenwug)\
