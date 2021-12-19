@@ -1,4 +1,0 @@
-nextcord
-python-dotenv
-requests
-pyfiglet
