@@ -16,7 +16,7 @@ Multifunctional Discord Bot Project
 1. Create your application on [Discord Developer Portal](https://discord.com/developers/applications)
 2. Enable `PRESENCE INTENT`, `MESSAGE CONTENT INTENT` and `SERVER MEMBERS INTENT` on `Privileged Gateway Intents`
 3. Copy and paste your discord bot token to `Data/config.json`
-4. Install all necessary libraries using `pip install -r Data/requirements.txt`
+4. Install all necessary libraries using `pip install -r requirements.txt`
 5. Run `Bot.py` and Enjoy!
 
 ## Requirements
